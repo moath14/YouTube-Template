@@ -8,13 +8,15 @@ $(document).ready(function(){
         smoothscroll: true
     }); 
 
-    $(".fa-bars, a.el-float-left").click(function(){
+    $(".fa-bars, a.el-float-left").click(function(e){
+        e.preventDefault();
         $(".menu-bars").animate({
             left: 0
         },1000)
     });
 
-    $(".fa-times").click(function(){
+    $(".fa-times").click(function(e){
+        e.preventDefault();
         $(".menu-bars").animate({
             left: -280
         },1000)
